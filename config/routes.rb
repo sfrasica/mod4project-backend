@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_digimons
+  resources :userDigimons
   resources :digimons
   resources :users, only: [:create]
 

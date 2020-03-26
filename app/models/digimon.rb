@@ -1,5 +1,5 @@
 class Digimon < ApplicationRecord
-has_many :userDigimons
-has_many :users, through: :userDigimons
+has_many :user_digimons
+has_many :users, through: :user_digimons
 end
     
