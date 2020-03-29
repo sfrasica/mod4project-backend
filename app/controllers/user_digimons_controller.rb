@@ -9,7 +9,8 @@ class UserDigimonsController < ApplicationController
 
     def create
         # byebug
-        @digimon = Digimon.find_by(params[:id])
+        # params from the body of the user_digimons fetch
+        @digimon = Digimon.find_by(id: params[:digimon_id])
         @user_digimon = UserDigimon.create(user: @user, digimon: @digimon)
         render json: @user_digimon
       end
@@ -18,6 +19,13 @@ class UserDigimonsController < ApplicationController
         @user_digimon = UserDigimon.find_by(id: params[:id])
         render json: @user_digimon
     end
+
+   def destroy
+        @user_digimon = UserDigimon.find_by(id: params[:id])
+        render json: @user_digimon
+        @user_digimon.destroy
+   end
+    
 
     
 end

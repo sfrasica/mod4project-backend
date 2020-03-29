@@ -6,10 +6,6 @@ class UsersController < ApplicationController
       render json: @users
     end
 
-    def show
-      @user = User.find_by(id: params[:id])
-      render json: @user
-    end
 
     def history
       @found_user = User.find_by(username: params[:findTheUserByThisUsername])
