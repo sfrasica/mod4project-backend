@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_digimons, only: [:create, :index, :show, :destroy]
+  resources :user_digimons, only: [:create, :index, :show, :destroy, :update]
   resources :digimons
   resources :users, only: [:create, :index, :show]
 

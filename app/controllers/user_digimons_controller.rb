@@ -25,6 +25,12 @@ class UserDigimonsController < ApplicationController
         render json: @user_digimon
         @user_digimon.destroy
    end
+
+   def update
+        @digimon = Digimon.find_by(id: params[:digimon_id])
+        @user_digimon.update
+        render json: @user_digimon
+   end
     
 
     

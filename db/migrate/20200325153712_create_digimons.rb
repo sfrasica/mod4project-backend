@@ -4,7 +4,7 @@ class CreateDigimons < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :img
       t.string :level
-
+      t.integer :stats
       t.timestamps
     end
   end
